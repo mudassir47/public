@@ -75,12 +75,12 @@
 
 
     <!-- Services Section Start -->
+    <h3 > <a href="" class="see-more">See more ></a></h3>
     <section class="services" id="services">
         <div class="heading">
             <h3>Services</h3>
         </div>
             <div class="card-content">
-
                 <div class="row">
                     <i class="fa-solid fa-money-bill-trend-up"></i>
                     <div class="card-body">
@@ -352,7 +352,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>AQSA Travels made my journey hassle-free and efficient! From booking my tickets to helping with essential documents, their team provided top-notch service. I highly recommend them for their expertise and commitment to customer satisfaction..</p>
+                <p>AQSA Travels made my journey easy! Excellent service from ticket booking to document assistance. Highly recommended for stress-free travel.</p>
 
             </div>
             <div class="row">
@@ -364,7 +364,7 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam a earum commodi exercitationem explicabo amet repudiandae nemo nesciunt beatae omnis.</p>
+                <p>AQSA Travels is exceptional! Seamless travel and document assistance. Trustworthy team for all your travel and documentation needs.</p>
 
             </div>
             <div class="row">
@@ -376,7 +376,13 @@
                     <i class="fa-solid fa-star"></i>
                     <i class="fa-solid fa-star"></i>
                 </div>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam a earum commodi exercitationem explicabo amet repudiandae nemo nesciunt beatae omnis.</p>
+                <p>AQSA Travels delivers stress-free travel and documents. Unmatched expertise and professionalism. Choose them for a reliable and smooth experience."
+
+
+
+
+
+                </p>
 
             </div>
         </div>
@@ -390,12 +396,12 @@
     <section class="contact" id="contact">
         <div class="contact-text">
             <h2>Get In <span>Touch</span></h2>
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Saepe eius possimus nostrum in assumenda aliquam?</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Non, accusantium.</p>
+            <p>Embark on worry-free journeys and streamline essential document processes with AQSA Travels. Contact us for seamless booking of railway, airplane, and bus tickets. Let our experts assist you in obtaining passports, PCC, Aadhar card, PAN card, driving license, ration card, voter ID, and birth certificates. Experience secure and affordable money transfers.</p>
+            <p>Your adventure begins when you get in touch with AQSA Travels!</p>
             <div class="list">
-                <li><a href="#">+9200000000000000</a></li>
-                <li><a href="#">example@gmail.com</a></li>
-                <li><a href="#">Pakistan Sindh Karachi</a></li>
+                <li><a href="#">+919987184560</a></li>
+                <li><a href="#">Mudassirs472@gmail.com</a></li>
+                <li><a href="#">Shaikh Mudassir</a></li>
             </div>
         </div>
 
@@ -419,8 +425,9 @@
     <footer id="footer">
         <div class="footer-content">
             <div class="row" id="row1">
-                <a href="#" id="footer-logo">Travel Agency</a>
-                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis ratione voluptatem asperiores minima quidem quibusdam tenetur eligendi eaque incidunt. Laudantium?</p>
+                <a href="#" id="footer-logo">AQSA Travels</a>
+                <p>
+                    AQSA Travels: Your one-stop solution for seamless travel bookings and essential document services. Experience comfort, security, and exceptional customer service with us. Your journey begins here!</p>
                 <div class="socail-links">
                     <i class="fa-brands fa-twitter"></i>
                     <i class="fa-brands fa-facebook-f"></i>
@@ -442,11 +449,11 @@
             <div class="row" id="row3">
                 <h3>Other Links</h3>
                 <ul>
-                    <li><a href="#">Web Design</a></li>
-                    <li><a href="#">App Design</a></li>
-                    <li><a href="#">Game Design</a></li>
-                    <li><a href="#">Term & Condition</a></li>
-                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="https://www.instagram.com/snamexx/">Web Design</a></li>
+                    <li><a href="https://www.instagram.com/snamexx/">App Design</a></li>
+                    <li><a href="https://www.instagram.com/snamexx/">Game Design</a></li>
+                    <li><a href="https://www.instagram.com/snamexx/">Term & Condition</a></li>
+                    <li><a href="https://www.instagram.com/snamexx/">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="row" id="row4">
@@ -477,20 +484,20 @@
             var nameAndDetails = document.querySelector('textarea[placeholder="Enter Your Name & Details"]').value;
 
             // Format the data as a single line
-            var message = "Booking Details: From Where - " + destination +
+            var bookingDetails = "Booking Details: From Where - " + destination +
                 ", How Many People - " + numberOfPeople +
                 ", Arrival Date - " + arrivalDate +
                 ", Leaving Date - " + leavingDate +
                 ", Name & Details - " + nameAndDetails;
 
-            return encodeURIComponent(message);
+            return encodeURIComponent(bookingDetails);
         }
 
         // Function to open WhatsApp with the formatted data
         function openWhatsApp() {
             var whatsappNumber = '9958399157'; // Replace with your WhatsApp number
-            var message = formatFormData();
-            var whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + message;
+            var bookingMessage = formatFormData();
+            var whatsappUrl = 'https://wa.me/' + whatsappNumber + '?text=' + bookingMessage;
 
             // Open WhatsApp in a new window or tab
             window.open(whatsappUrl, '_blank');
@@ -502,13 +509,52 @@
             bookNowButton.addEventListener('click', function (event) {
                 // Prevent the default form submission
                 event.preventDefault();
-                
+
                 // Call the function to open WhatsApp with the formatted data
                 openWhatsApp();
             });
         }
+
+        // Function to format the data from the form for the existing form
+        function formatFormForWhatsApp() {
+            var name = document.querySelector('input[placeholder="Name"]').value;
+            var phone = document.querySelector('input[placeholder="Phone"]').value;
+            var email = document.querySelector('input[placeholder="Email"]').value;
+            var message = document.querySelector('textarea[placeholder="Message"]').value;
+
+            // Format the data as a single line
+            var contactMessage = "Name: " + name +
+                ", Phone: " + phone +
+                ", Email: " + email +
+                ", Message: " + message;
+
+            return encodeURIComponent(contactMessage);
+        }
+
+        // Function to open WhatsApp with the formatted data for the existing form
+        function openWhatsAppForContact() {
+            var contactWhatsAppNumber = '9958399157'; // Replace with your WhatsApp number
+            var contactMessage = formatFormForWhatsApp();
+            var contactWhatsAppUrl = 'https://wa.me/' + contactWhatsAppNumber + '?text=' + contactMessage;
+
+            // Open WhatsApp in a new window or tab
+            window.open(contactWhatsAppUrl, '_blank');
+        }
+
+        // Attach the click event to the contact form submission
+        var contactForm = document.getElementById('bookingForm'); // Change 'bookingForm' to the actual ID of your contact form
+        if (contactForm) {
+            contactForm.addEventListener('submit', function (event) {
+                // Prevent the default form submission
+                event.preventDefault();
+
+                // Call the function to open WhatsApp with the formatted data for the contact form
+                openWhatsAppForContact();
+            });
+        }
     });
 </script>
+
 
 
 
